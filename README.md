@@ -8,7 +8,7 @@ The purpose of this repository is to collect and share knowledge and knowhow abo
 
 ### CONTENTS
 
-Bare with us as we collect and organise information in this repository. You are more than welcome to contribute or to raise issues in that we want information made available here to be pertinent and usable by all.
+Bear with us as we collect and organise information in this repository. You are more than welcome to contribute or to raise issues in that we want information made available here to be pertinent and usable by all.
 
 ### SEE ALSO
 
