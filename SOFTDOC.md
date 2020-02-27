@@ -2,7 +2,7 @@
 
 ## Commands
 
--   ** UNIX command interpreter** \
+-   **UNIX command interpreter** \
     [sh(1)](https://github.com/ksh-community/ksh/blob/master/src/cmd/ksh93/sh.1),
     and [ksh93 memorandum](https://github.com/ksh-community/ksh/blob/master/src/cmd/ksh93/sh.memo)
 
@@ -145,18 +145,17 @@
 
 ## Unclassified
 
--   [mkservice](https://github.com/ksh-community/ksh/blob/master/src/cmd/ksh93/bltins/mkservice.c)
--   [regress](https://github.com/ksh-community/ksh/blob/master/src/cmd/ksh93/bltins/regress.c)
--   [bash](https://github.com/ksh-community/ksh/blob/master/src/cmd/ksh93/sh/bash.c)
--   [shcomp](https://github.com/ksh-community/ksh/blob/master/src/cmd/ksh93/sh/shcomp.c)
--   [nvtype](https://github.com/ksh-community/ksh/blob/master/src/cmd/ksh93/sh/nvtype.c)
+[mkservice](https://github.com/ksh-community/ksh/blob/master/src/cmd/ksh93/bltins/mkservice.c),
+[regress](https://github.com/ksh-community/ksh/blob/master/src/cmd/ksh93/bltins/regress.c),
+[bash](https://github.com/ksh-community/ksh/blob/master/src/cmd/ksh93/sh/bash.c),
+[shcomp](https://github.com/ksh-community/ksh/blob/master/src/cmd/ksh93/sh/shcomp.c),
+[nvtype](https://github.com/ksh-community/ksh/blob/master/src/cmd/ksh93/sh/nvtype.c)
 
 See also HTML files:
-
--   [index (outer)](https://github.com/ksh-community/ksh/blob/master/docs/index.html)
--   [index (inner)](https://github.com/ksh-community/ksh/blob/master/docs/ksh/index.html)
--   [builtins](https://github.com/ksh-community/ksh/blob/master/docs/ksh/builtins.html)
--   [examples](https://github.com/ksh-community/ksh/blob/master/docs/ksh/examples.html)
--   [features](https://github.com/ksh-community/ksh/blob/master/docs/ksh/features.html)
--   [faq](https://github.com/ksh-community/ksh/blob/master/docs/ksh/faq.html)
--   [ksh](https://github.com/ksh-community/ksh/blob/master/docs/ksh/ksh.html)
+[index (outer)](https://github.com/ksh-community/ksh/blob/master/docs/index.html),
+[index (inner)](https://github.com/ksh-community/ksh/blob/master/docs/ksh/index.html),
+[builtins](https://github.com/ksh-community/ksh/blob/master/docs/ksh/builtins.html),
+[examples](https://github.com/ksh-community/ksh/blob/master/docs/ksh/examples.html),
+[features](https://github.com/ksh-community/ksh/blob/master/docs/ksh/features.html),
+[faq](https://github.com/ksh-community/ksh/blob/master/docs/ksh/faq.html),
+[ksh](https://github.com/ksh-community/ksh/blob/master/docs/ksh/ksh.html)
