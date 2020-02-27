@@ -9,7 +9,7 @@ instance, the man(1) page for the `whence` command.
     [sh(1)](https://github.com/ksh-community/ksh/blob/master/src/cmd/ksh93/sh.1),
     and [ksh93 memorandum](https://github.com/ksh-community/ksh/blob/master/src/cmd/ksh93/sh.memo)
 
--   **Builtins (or related)** \
+-   **Builtins (see also libcmd)** \
     [enum(1)](https://github.com/ksh-community/ksh/blob/master/src/cmd/ksh93/bltins/enum.c),
     [env(1)](https://github.com/ksh-community/ksh/blob/master/docs/ksh/scripts/env.txt),
     [builtins(1)](https://github.com/ksh-community/ksh/blob/master/src/cmd/ksh93/data/builtins.c),
