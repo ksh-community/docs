@@ -1,5 +1,8 @@
 # Documentation available in the software package
 
+_Note_: this should be considered WIP as this document was semi-automatically produced and has missing items, such as, for
+instance, the man(1) page for the `whence` command.
+
 ## Commands
 
 -   **UNIX command interpreter** \
