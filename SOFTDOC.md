@@ -1,20 +1,40 @@
 # Documentation available in the software package
 
-_Note_: This is a first attempt at identifying all sources of documentation in the software package. Categorisation is currently
-by markup language; this is not practical. Subsequent updates will allow to classify by domain such as _built-ins_, _build
-system_, …
+## Commands
 
-## UNIX man(1) pages
+-   ** UNIX command interpreter** \
+    [sh(1)](https://github.com/ksh-community/ksh/blob/master/src/cmd/ksh93/sh.1),
+    and [ksh93 memorandum](https://github.com/ksh-community/ksh/blob/master/src/cmd/ksh93/sh.memo)
 
-### Commands
+-   **Builtins (or related)** \
+    [enum(1)](https://github.com/ksh-community/ksh/blob/master/src/cmd/ksh93/bltins/enum.c),
+    [env(1)](https://github.com/ksh-community/ksh/blob/master/docs/ksh/scripts/env.txt),
+    [builtins(1)](https://github.com/ksh-community/ksh/blob/master/src/cmd/ksh93/data/builtins.c),
+    [test(1)](https://github.com/ksh-community/ksh/blob/master/src/cmd/ksh93/data/testops.c)
 
--   [src/cmd/ksh93/sh.1](https://github.com/ksh-community/ksh/blob/master/src/cmd/ksh93/sh.1)
+-   **AST build system** \
+    [crossexec(1)](https://github.com/ksh-community/ksh/blob/master/src/cmd/INIT/crossexec.sh),
+    [ditto(1)](https://github.com/ksh-community/ksh/blob/master/src/cmd/INIT/ditto.sh),
+    [execrate(1)](https://github.com/ksh-community/ksh/blob/master/src/cmd/INIT/execrate.sh),
+    [filter(1)](https://github.com/ksh-community/ksh/blob/master/src/cmd/INIT/filter.sh),
+    [hurl(1)](https://github.com/ksh-community/ksh/blob/master/src/cmd/INIT/hurl.sh),
+    [iffe(1)](https://github.com/ksh-community/ksh/blob/master/src/cmd/INIT/iffe.sh),
+    [mamake(1)](https://github.com/ksh-community/ksh/blob/master/src/cmd/INIT/mamake.c),
+    [mamprobe(1)](https://github.com/ksh-community/ksh/blob/master/src/cmd/INIT/mamprobe.sh)
+    (and [here](https://github.com/ksh-community/ksh/blob/master/bin/mamprobe)),
+    [mktest(1)](https://github.com/ksh-community/ksh/blob/master/src/cmd/INIT/mktest.sh),
+    [package(1)](https://github.com/ksh-community/ksh/blob/master/src/cmd/INIT/package.sh)
+    (and [here](https://github.com/ksh-community/ksh/blob/master/bin/package)),
+    [ratz(1)](https://github.com/ksh-community/ksh/blob/master/src/cmd/INIT/ratz.c),
+    [regress(1)](https://github.com/ksh-community/ksh/blob/master/src/cmd/INIT/regress.sh),
+    [release(1)](https://github.com/ksh-community/ksh/blob/master/src/cmd/INIT/release.c),
+    [rt(1)](https://github.com/ksh-community/ksh/blob/master/src/cmd/INIT/rt.sh),
+    [shtests(1)](https://github.com/ksh-community/ksh/blob/master/src/cmd/ksh93/tests/shtests)
 
-### Library functions
+## Libraries
 
-#### libast
-
--   [LIBAST(3)](https://github.com/ksh-community/ksh/blob/master/src/lib/libast/man/LIBAST.3),
+-   **libast** \
+    [LIBAST(3)](https://github.com/ksh-community/ksh/blob/master/src/lib/libast/man/LIBAST.3),
     [aso(3)](https://github.com/ksh-community/ksh/blob/master/src/lib/libast/man/aso.3),
     [ast(3)](https://github.com/ksh-community/ksh/blob/master/src/lib/libast/man/ast.3),
     [astsa(3)](https://github.com/ksh-community/ksh/blob/master/src/lib/libast/man/astsa.3),
@@ -74,106 +94,69 @@ system_, …
     [vecargs(3)](https://github.com/ksh-community/ksh/blob/master/src/lib/libast/man/vecargs.3),
     [vmalloc(3)](https://github.com/ksh-community/ksh/blob/master/src/lib/libast/man/vmalloc.3)
 
-#### libcoshell
+-   **libcmd** \
+    [cp(3)](https://github.com/ksh-community/ksh/blob/master/src/lib/libcmd/cp.c)
+    [vmstate(3)](https://github.com/ksh-community/ksh/blob/master/src/lib/libcmd/vmstate.c)
+    [tail(3)](https://github.com/ksh-community/ksh/blob/master/src/lib/libcmd/tail.c)
+    [cksum(3)](https://github.com/ksh-community/ksh/blob/master/src/lib/libcmd/cksum.c)
+    [join(3)](https://github.com/ksh-community/ksh/blob/master/src/lib/libcmd/join.c)
+    [fds(3)](https://github.com/ksh-community/ksh/blob/master/src/lib/libcmd/fds.c)
+    [uniq(3)](https://github.com/ksh-community/ksh/blob/master/src/lib/libcmd/uniq.c)
+    [mkfifo(3)](https://github.com/ksh-community/ksh/blob/master/src/lib/libcmd/mkfifo.c)
+    [stty(3)](https://github.com/ksh-community/ksh/blob/master/src/lib/libcmd/stty.c)
+    [tee(3)](https://github.com/ksh-community/ksh/blob/master/src/lib/libcmd/tee.c)
+    [fold(3)](https://github.com/ksh-community/ksh/blob/master/src/lib/libcmd/fold.c)
+    [paste(3)](https://github.com/ksh-community/ksh/blob/master/src/lib/libcmd/paste.c)
+    [rm(3)](https://github.com/ksh-community/ksh/blob/master/src/lib/libcmd/rm.c)
+    [cat(3)](https://github.com/ksh-community/ksh/blob/master/src/lib/libcmd/cat.c)
+    [wc(3)](https://github.com/ksh-community/ksh/blob/master/src/lib/libcmd/wc.c)
+    [getconf(3)](https://github.com/ksh-community/ksh/blob/master/src/lib/libcmd/getconf.c)
+    [pathchk(3)](https://github.com/ksh-community/ksh/blob/master/src/lib/libcmd/pathchk.c)
+    [dirname(3)](https://github.com/ksh-community/ksh/blob/master/src/lib/libcmd/dirname.c)
+    [basename(3)](https://github.com/ksh-community/ksh/blob/master/src/lib/libcmd/basename.c)
+    [mkdir(3)](https://github.com/ksh-community/ksh/blob/master/src/lib/libcmd/mkdir.c)
+    [pids(3)](https://github.com/ksh-community/ksh/blob/master/src/lib/libcmd/pids.c)
+    [head(3)](https://github.com/ksh-community/ksh/blob/master/src/lib/libcmd/head.c)
+    [sync(3)](https://github.com/ksh-community/ksh/blob/master/src/lib/libcmd/sync.c)
+    [chmod(3)](https://github.com/ksh-community/ksh/blob/master/src/lib/libcmd/chmod.c)
+    [uname(3)](https://github.com/ksh-community/ksh/blob/master/src/lib/libcmd/uname.c)
+    [tty(3)](https://github.com/ksh-community/ksh/blob/master/src/lib/libcmd/tty.c)
+    [mktemp(3)](https://github.com/ksh-community/ksh/blob/master/src/lib/libcmd/mktemp.c)
+    [cmp(3)](https://github.com/ksh-community/ksh/blob/master/src/lib/libcmd/cmp.c)
+    [date(3)](https://github.com/ksh-community/ksh/blob/master/src/lib/libcmd/date.c)
+    [cut(3)](https://github.com/ksh-community/ksh/blob/master/src/lib/libcmd/cut.c)
+    [rmdir(3)](https://github.com/ksh-community/ksh/blob/master/src/lib/libcmd/rmdir.c)
+    [rev(3)](https://github.com/ksh-community/ksh/blob/master/src/lib/libcmd/rev.c)
+    [logname(3)](https://github.com/ksh-community/ksh/blob/master/src/lib/libcmd/logname.c)
+    [chgrp(3)](https://github.com/ksh-community/ksh/blob/master/src/lib/libcmd/chgrp.c)
+    [fmt(3)](https://github.com/ksh-community/ksh/blob/master/src/lib/libcmd/fmt.c)
+    [comm(3)](https://github.com/ksh-community/ksh/blob/master/src/lib/libcmd/comm.c)
+    [expr(3)](https://github.com/ksh-community/ksh/blob/master/src/lib/libcmd/expr.c)
+    [id(3)](https://github.com/ksh-community/ksh/blob/master/src/lib/libcmd/id.c)
 
--   [coshell(3)](https://github.com/ksh-community/ksh/blob/master/src/lib/libcoshell/coshell.3)
+-   **libcoshell** \
+    [coshell(3)](https://github.com/ksh-community/ksh/blob/master/src/lib/libcoshell/coshell.3)
 
-### libshell
+-   **libshell** \
+    [shell(3)](https://github.com/ksh-community/ksh/blob/master/src/cmd/ksh93/shell.3)
 
--   [shell(3)](https://github.com/ksh-community/ksh/blob/master/src/cmd/ksh93/shell.3)
+-   **libnval** \
+    [nval(3)](https://github.com/ksh-community/ksh/blob/master/src/cmd/ksh93/nval.3)
 
-#### libnval
+## Unclassified
 
--   [nval(3)](https://github.com/ksh-community/ksh/blob/master/src/cmd/ksh93/nval.3)
+-   [mkservice](https://github.com/ksh-community/ksh/blob/master/src/cmd/ksh93/bltins/mkservice.c)
+-   [regress](https://github.com/ksh-community/ksh/blob/master/src/cmd/ksh93/bltins/regress.c)
+-   [bash](https://github.com/ksh-community/ksh/blob/master/src/cmd/ksh93/sh/bash.c)
+-   [shcomp](https://github.com/ksh-community/ksh/blob/master/src/cmd/ksh93/sh/shcomp.c)
+-   [nvtype](https://github.com/ksh-community/ksh/blob/master/src/cmd/ksh93/sh/nvtype.c)
 
-## AST `getopts(1)` markup
+See also HTML files:
 
-Below are files with embedded `getopts(1)` markup enabling the dynamic generation of man(1) pages, on-demand.
-
-
--   [bin/mamprobe](https://github.com/ksh-community/ksh/blob/master/bin/mamprobe)
--   [bin/package](https://github.com/ksh-community/ksh/blob/master/bin/package)
--   [docs/ksh/scripts/env.txt](https://github.com/ksh-community/ksh/blob/master/docs/ksh/scripts/env.txt)
--   [lib/package/ast-ksh.README](https://github.com/ksh-community/ksh/blob/master/lib/package/ast-ksh.README)
-
--   [src/cmd/INIT/mamprobe.sh](https://github.com/ksh-community/ksh/blob/master/src/cmd/INIT/mamprobe.sh)
--   [src/cmd/INIT/filter.sh](https://github.com/ksh-community/ksh/blob/master/src/cmd/INIT/filter.sh)
--   [src/cmd/INIT/hurl.sh](https://github.com/ksh-community/ksh/blob/master/src/cmd/INIT/hurl.sh)
--   [src/cmd/INIT/ratz.c](https://github.com/ksh-community/ksh/blob/master/src/cmd/INIT/ratz.c)
--   [src/cmd/INIT/regress.sh](https://github.com/ksh-community/ksh/blob/master/src/cmd/INIT/regress.sh)
--   [src/cmd/INIT/mktest.sh](https://github.com/ksh-community/ksh/blob/master/src/cmd/INIT/mktest.sh)
--   [src/cmd/INIT/iffe.sh](https://github.com/ksh-community/ksh/blob/master/src/cmd/INIT/iffe.sh)
--   [src/cmd/INIT/execrate.sh](https://github.com/ksh-community/ksh/blob/master/src/cmd/INIT/execrate.sh)
--   [src/cmd/INIT/crossexec.sh](https://github.com/ksh-community/ksh/blob/master/src/cmd/INIT/crossexec.sh)
--   [src/cmd/INIT/package.sh](https://github.com/ksh-community/ksh/blob/master/src/cmd/INIT/package.sh)
--   [src/cmd/INIT/ditto.sh](https://github.com/ksh-community/ksh/blob/master/src/cmd/INIT/ditto.sh)
--   [src/cmd/INIT/rt.sh](https://github.com/ksh-community/ksh/blob/master/src/cmd/INIT/rt.sh)
--   [src/cmd/INIT/release.c](https://github.com/ksh-community/ksh/blob/master/src/cmd/INIT/release.c)
--   [src/cmd/INIT/mamake.c](https://github.com/ksh-community/ksh/blob/master/src/cmd/INIT/mamake.c)
-
--   [src/cmd/ksh93/tests/shtests](https://github.com/ksh-community/ksh/blob/master/src/cmd/ksh93/tests/shtests)
--   [src/cmd/ksh93/bltins/mkservice.c](https://github.com/ksh-community/ksh/blob/master/src/cmd/ksh93/bltins/mkservice.c)
--   [src/cmd/ksh93/bltins/enum.c](https://github.com/ksh-community/ksh/blob/master/src/cmd/ksh93/bltins/enum.c)
--   [src/cmd/ksh93/bltins/regress.c](https://github.com/ksh-community/ksh/blob/master/src/cmd/ksh93/bltins/regress.c)
--   [src/cmd/ksh93/sh/bash.c](https://github.com/ksh-community/ksh/blob/master/src/cmd/ksh93/sh/bash.c)
--   [src/cmd/ksh93/sh/shcomp.c](https://github.com/ksh-community/ksh/blob/master/src/cmd/ksh93/sh/shcomp.c)
--   [src/cmd/ksh93/sh/nvtype.c](https://github.com/ksh-community/ksh/blob/master/src/cmd/ksh93/sh/nvtype.c)
--   [src/cmd/ksh93/data/builtins.c](https://github.com/ksh-community/ksh/blob/master/src/cmd/ksh93/data/builtins.c)
--   [src/cmd/ksh93/data/testops.c](https://github.com/ksh-community/ksh/blob/master/src/cmd/ksh93/data/testops.c)
--   [src/lib/libcmd/cp.c](https://github.com/ksh-community/ksh/blob/master/src/lib/libcmd/cp.c)
--   [src/lib/libcmd/vmstate.c](https://github.com/ksh-community/ksh/blob/master/src/lib/libcmd/vmstate.c)
--   [src/lib/libcmd/tail.c](https://github.com/ksh-community/ksh/blob/master/src/lib/libcmd/tail.c)
--   [src/lib/libcmd/cksum.c](https://github.com/ksh-community/ksh/blob/master/src/lib/libcmd/cksum.c)
--   [src/lib/libcmd/join.c](https://github.com/ksh-community/ksh/blob/master/src/lib/libcmd/join.c)
--   [src/lib/libcmd/fds.c](https://github.com/ksh-community/ksh/blob/master/src/lib/libcmd/fds.c)
--   [src/lib/libcmd/uniq.c](https://github.com/ksh-community/ksh/blob/master/src/lib/libcmd/uniq.c)
--   [src/lib/libcmd/mkfifo.c](https://github.com/ksh-community/ksh/blob/master/src/lib/libcmd/mkfifo.c)
--   [src/lib/libcmd/stty.c](https://github.com/ksh-community/ksh/blob/master/src/lib/libcmd/stty.c)
--   [src/lib/libcmd/tee.c](https://github.com/ksh-community/ksh/blob/master/src/lib/libcmd/tee.c)
--   [src/lib/libcmd/fold.c](https://github.com/ksh-community/ksh/blob/master/src/lib/libcmd/fold.c)
--   [src/lib/libcmd/paste.c](https://github.com/ksh-community/ksh/blob/master/src/lib/libcmd/paste.c)
--   [src/lib/libcmd/rm.c](https://github.com/ksh-community/ksh/blob/master/src/lib/libcmd/rm.c)
--   [src/lib/libcmd/cat.c](https://github.com/ksh-community/ksh/blob/master/src/lib/libcmd/cat.c)
--   [src/lib/libcmd/wc.c](https://github.com/ksh-community/ksh/blob/master/src/lib/libcmd/wc.c)
--   [src/lib/libcmd/getconf.c](https://github.com/ksh-community/ksh/blob/master/src/lib/libcmd/getconf.c)
--   [src/lib/libcmd/pathchk.c](https://github.com/ksh-community/ksh/blob/master/src/lib/libcmd/pathchk.c)
--   [src/lib/libcmd/dirname.c](https://github.com/ksh-community/ksh/blob/master/src/lib/libcmd/dirname.c)
--   [src/lib/libcmd/basename.c](https://github.com/ksh-community/ksh/blob/master/src/lib/libcmd/basename.c)
--   [src/lib/libcmd/mkdir.c](https://github.com/ksh-community/ksh/blob/master/src/lib/libcmd/mkdir.c)
--   [src/lib/libcmd/pids.c](https://github.com/ksh-community/ksh/blob/master/src/lib/libcmd/pids.c)
--   [src/lib/libcmd/head.c](https://github.com/ksh-community/ksh/blob/master/src/lib/libcmd/head.c)
--   [src/lib/libcmd/sync.c](https://github.com/ksh-community/ksh/blob/master/src/lib/libcmd/sync.c)
--   [src/lib/libcmd/chmod.c](https://github.com/ksh-community/ksh/blob/master/src/lib/libcmd/chmod.c)
--   [src/lib/libcmd/uname.c](https://github.com/ksh-community/ksh/blob/master/src/lib/libcmd/uname.c)
--   [src/lib/libcmd/tty.c](https://github.com/ksh-community/ksh/blob/master/src/lib/libcmd/tty.c)
--   [src/lib/libcmd/mktemp.c](https://github.com/ksh-community/ksh/blob/master/src/lib/libcmd/mktemp.c)
--   [src/lib/libcmd/cmp.c](https://github.com/ksh-community/ksh/blob/master/src/lib/libcmd/cmp.c)
--   [src/lib/libcmd/date.c](https://github.com/ksh-community/ksh/blob/master/src/lib/libcmd/date.c)
--   [src/lib/libcmd/cut.c](https://github.com/ksh-community/ksh/blob/master/src/lib/libcmd/cut.c)
--   [src/lib/libcmd/rmdir.c](https://github.com/ksh-community/ksh/blob/master/src/lib/libcmd/rmdir.c)
--   [src/lib/libcmd/rev.c](https://github.com/ksh-community/ksh/blob/master/src/lib/libcmd/rev.c)
--   [src/lib/libcmd/logname.c](https://github.com/ksh-community/ksh/blob/master/src/lib/libcmd/logname.c)
--   [src/lib/libcmd/chgrp.c](https://github.com/ksh-community/ksh/blob/master/src/lib/libcmd/chgrp.c)
--   [src/lib/libcmd/fmt.c](https://github.com/ksh-community/ksh/blob/master/src/lib/libcmd/fmt.c)
--   [src/lib/libcmd/comm.c](https://github.com/ksh-community/ksh/blob/master/src/lib/libcmd/comm.c)
--   [src/lib/libcmd/expr.c](https://github.com/ksh-community/ksh/blob/master/src/lib/libcmd/expr.c)
--   [src/lib/libcmd/id.c](https://github.com/ksh-community/ksh/blob/master/src/lib/libcmd/id.c)
-
--   [ChangeLog](https://github.com/ksh-community/ksh/blob/master/src/lib/libast/RELEASE)
-
-## HTML files
-
-### ChangeLogs
-
--   [lib/package/INIT.html](https://github.com/ksh-community/ksh/blob/master/lib/package/INIT.html)
--   [lib/package/ast-ksh.html](https://github.com/ksh-community/ksh/blob/master/lib/package/ast-ksh.html)
-
-### Other
-
--   [docs/index.html](https://github.com/ksh-community/ksh/blob/master/docs/index.html)
--   [docs/ksh/builtins.html](https://github.com/ksh-community/ksh/blob/master/docs/ksh/builtins.html)
--   [docs/ksh/index.html](https://github.com/ksh-community/ksh/blob/master/docs/ksh/index.html)
--   [docs/ksh/examples.html](https://github.com/ksh-community/ksh/blob/master/docs/ksh/examples.html)
--   [docs/ksh/features.html](https://github.com/ksh-community/ksh/blob/master/docs/ksh/features.html)
--   [docs/ksh/faq.html](https://github.com/ksh-community/ksh/blob/master/docs/ksh/faq.html)
--   [docs/ksh/ksh.html](https://github.com/ksh-community/ksh/blob/master/docs/ksh/ksh.html)
+-   [index (outer)](https://github.com/ksh-community/ksh/blob/master/docs/index.html)
+-   [index (inner)](https://github.com/ksh-community/ksh/blob/master/docs/ksh/index.html)
+-   [builtins](https://github.com/ksh-community/ksh/blob/master/docs/ksh/builtins.html)
+-   [examples](https://github.com/ksh-community/ksh/blob/master/docs/ksh/examples.html)
+-   [features](https://github.com/ksh-community/ksh/blob/master/docs/ksh/features.html)
+-   [faq](https://github.com/ksh-community/ksh/blob/master/docs/ksh/faq.html)
+-   [ksh](https://github.com/ksh-community/ksh/blob/master/docs/ksh/ksh.html)
