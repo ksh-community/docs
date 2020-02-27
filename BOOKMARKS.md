@@ -15,24 +15,24 @@
 
 ## Inspirational
 
--   "_The AWK Programming Language_", \
+-   "[The AWK Programming Language](https://en.wikipedia.org/wiki/The_AWK_Programming_Language)", \
     Al Aho, Brian Kernighan, and Peter Weinberger, Addison Wesley, 1988.
 
 -   "_The FIT Programming Language Primer_", \
      Lloyd H. Nakatani and Laurence W. Ruedisueli, TM 1126-920301-03, 1992.
 
--   "_Programming perl_", \
+-   "[Programming perl](https://en.wikipedia.org/wiki/Programming_Perl)", \
      Larry Wall and Randal Schwartz, O'Reilly & Assoc, 1990.
 
--   "_Tcl: An Embeddable Command Language_", \
+-   "[Tcl: An Embeddable Command Language](http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.38.8230)", \
     John K. Ousterhout, Proceedings of the Washington USENIX meeting, pp. 133-146, 1990.
 
 ## Builtins
 
-- [Guidelines for writing ksh-93 built-in commands](http://pkg.cs.ovgu.de/LNF/i386/5.10/LNFksh93-docs/reloc/ksh93/builtins.pdf) \
+- "[Guidelines for writing ksh-93 built-in commands](http://pkg.cs.ovgu.de/LNF/i386/5.10/LNFksh93-docs/reloc/ksh93/builtins.pdf)" \
   by David G. Korn
 
 ## Design and implementation
 
-- [SFIO: Safe/Fast String/File IO](http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.51.6574), \
+- "[SFIO: Safe/Fast String/File IO](http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.51.6574)", \
   by David Korn and Kiem-Phong Vo in the proc. of the Summer ’91 Usenix Conference
