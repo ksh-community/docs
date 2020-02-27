@@ -2,7 +2,30 @@
 
 ## General
 
-- David Korn's _official_ websites ([kornshell.com](http://kornshell.com), [kornshell.org](http://kornshell.org)); not updated in a while.
+-   David Korn's _official_ websites ([kornshell.com](http://kornshell.com), [kornshell.org](http://kornshell.org));
+    not updated in a while.
+
+### Compatibility (and compliance)
+
+-   "_An Introduction to the UNIX Shell_", \
+    S. R. Bourne, BSTJ - Vol. 57, No. 6 part 2, pages 1947-1972, 1978.
+
+-   IEEE POSIX 1003.2 and ISO 9945-2, "_POSIX - Part 2: Shell and Utilities_", \
+    (aka "Shell Standard"), IEEE Std 1003.2-1992, ISO/IEC 9945-2, IEEE, 1993.
+
+### Inspirational
+
+-   "_The AWK Programming Language_", \
+    Al Aho, Brian Kernighan, and Peter Weinberger, Addison Wesley, 1988.
+
+-   "_The FIT Programming Language Primer_", \
+     Lloyd H. Nakatani and Laurence W. Ruedisueli, TM 1126-920301-03, 1992.
+
+-   "_Programming perl_", \
+     Larry Wall and Randal Schwartz, O'Reilly & Assoc, 1990.
+
+-   "_Tcl: An Embeddable Command Language_", \
+    John K. Ousterhout, Proceedings of the Washington USENIX meeting, pp. 133-146, 1990.
 
 ## KornShell implementation
 
