@@ -6,7 +6,7 @@
 
 ## KornShell implementation
 
-- [Guidelines for writing ksh-93 built-in commands](http://pkg.cs.ovgu.de/LNF/i386/5.10/LNFksh93-docs/reloc/ksh93/builtins.pdf)
+- [Guidelines for writing ksh-93 built-in commands](http://pkg.cs.ovgu.de/LNF/i386/5.10/LNFksh93-docs/reloc/ksh93/builtins.pdf) \
   by David G. Korn
 
 - [SFIO: Safe/Fast String/File IO](http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.51.6574), \
