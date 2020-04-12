@@ -17,7 +17,7 @@ Note that git automatically assigns the name **origin** to the cloned repository
 Before you start working on an problem or feature, please check the [ksh Issue](https://github.com/ksh-community/ksh/issues) web page, whether there is not already work in progress (WIP) to avoid wasting your valueable time. If there is someone already working on it, please check, whether it is possible to work together. If you can't find an issue for your problem/feature, please [create a new Issue](https://github.com/ksh-community/ksh/issues/new) and refer to it using a number sign + number (e.g. #123) when you refer to it on github. Within the issue web page you may ask for further guidance or get some hints from other collaborators.
 
 ## Branch, commit, rebase to master
-Before you actually start changing any code, you should always make sure, that your master is up-to-date - see below [**Sync with upstream**](#user-content-1-sync-with-upstream) for the related CLI commands. The master is our main and default branch (trunk). Here development happens, new features and fixes get merged to this one first (see also [branch overview](./branches.png "ksh Branch Model - see also https://nvie.com/posts/a-successful-git-branching-model/ by Vincent Driessen").
+Before you actually start changing any code, you should always make sure, that your master is up-to-date - see below [**Sync with upstream**](#user-content-1-sync-with-upstream) for the related CLI commands. The master is our main and default branch (trunk). Here development happens, new features and fixes get merged to this one first (see also [branch overview](./branches.png "ksh Branch Model - see also https://nvie.com/posts/a-successful-git-branching-model/ by Vincent Driessen")).
 
 When your master is up-to-date, create a new branch, e.g. named `fix_problem`:
 ```
@@ -125,14 +125,14 @@ In the new local branch, which contains the PR, one should now modify all commit
   * Use the [**Issue page**](https://help.github.com/en/github/managing-your-work-on-github/using-search-to-filter-issues-and-pull-requests) on github to discuss and track PR related ideas, enhancements, tasks, bugs, brainstorming (the **what**). Document the results as compact as possible in the code or commit message.
   * Use the [**PR page**](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/commenting-on-a-pull-request) on github to comment/annotate code related details (the **how**).
   * Commit messages: title
-    * Max. 72 chars. If too long, try to shorten it, and add the longer description to the "body" of the commit message.
+    * Max. 70 chars. If too long, try to shorten it, and add the longer description to the "body" of the commit message (length(prefix = `* ` + short_hash + ` `) = 10).
     * Should contain a reference to the issue ID, e.g. see #321.
     * To auto-close the related issue prefix with 'fix #123' or append '(fixes #321)' or use any other [auto-close phrase](https://help.github.com/en/github/managing-your-work-on-github/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword).
   * Commit message: body
     * the commit message body gets separated from the commit message title by a single blank line.
     * if the message title contains no reference to the issue ID, add the following tag to the body of all commits: `  See: #321` - replace 321 with the issue ID. You may add more using a single whitespace as separator.
-    * max. line length: 80 chars.
-    * if more than one author should be named, add the following line for each of them to the end of the message body: `Co-authored-by: Given Name <email>` - the email should be the one, which the author used to registered with github.
+    * max. line length: 76 chars (indent = 4).
+    * if more than one author should be named, add the following line for each of them to the end of the message body: `Co-authored-by: Given Name <email>` - the email should be the one, which the author used to register with github.
     * important know how refs should be part of the commit message unless they are already inlined in the code. If github issue pages are not available, one should still be able to get the know how to understand the patch pretty easy.
   * Code units, commits, patches: One should be able to read and understand them pretty easy, quickly. So:
     * Keep them as compact as possible.
