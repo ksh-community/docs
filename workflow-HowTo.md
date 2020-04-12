@@ -1,7 +1,7 @@
 # Pull Request (PR) / Workflow HowTo
 
 ## Clone the clone
-Before you start working on a fix or feature, you should clone the [**ksh repository**](https://github.com/ksh-community/ksh) - here we refer to it using the term **upstream**. You can do that by cloning the repository suing git directly. However, to be able to create and submit PRs you need to have your own **ksh** clone on github.com. Clicking the [**Fork**](https://help.github.com/en/github/getting-started-with-github/fork-a-repo) button on the upper right of the [**ksh repository**](https://github.com/ksh-community/ksh) accomplishes this. As soon as finished it redirects you to your ksh clone: here we refer to it using the term **origin**.
+Before you start working on a fix or feature, you should clone the [**ksh repository**](https://github.com/ksh-community/ksh) - here we refer to it using the term **upstream**. You can do that by cloning the repository using git directly. However, to be able to create and submit PRs you need to have your own **ksh** clone on github.com. Clicking the [**Fork**](https://help.github.com/en/github/getting-started-with-github/fork-a-repo) button on the upper right of the [**ksh repository**](https://github.com/ksh-community/ksh) accomplishes this. As soon as it is finished, it redirects you to your ksh clone: here we refer to it using the term **origin**.
 
 However, you probably do not wanna edit files remotely (via Github WebUI) and you want/should test your changes on your preferred machine and OS. So you should clone your `origin` to this machine/OS - here we refer to this new clone using the term **local**. Via CLI it is as easy as:
 ```
@@ -14,17 +14,17 @@ git config user.name 'Given to.use.4this.repo Surname'
 Note that git automatically assigns the name **origin** to the cloned repository (`https://github.com/*my_account*/ksh/`) and can be used to refer to it within git commands.
 
 ## Create an Issue
-Before you start working on an problem or feature, please check the [ksh Issue](https://github.com/ksh-community/ksh/issues) web page, whether there is not already work in progress (WIP) to avoid wasting your valueable time. If there is someone already working on it, please check, whether it is possible to work together. If you can't find an Issue for your problem/feature, please [create a new Issue](https://github.com/ksh-community/ksh/issues/new) and refer to it using a number sign + number (e.g. #123) when you refer to it on github. Within the issue web page you may ask for further guidance or get some hints from other collaborators.
+Before you start working on an problem or feature, please check the [ksh Issue](https://github.com/ksh-community/ksh/issues) web page, whether there is not already work in progress (WIP) to avoid wasting your valueable time. If there is someone already working on it, please check, whether it is possible to work together. If you can't find an issue for your problem/feature, please [create a new Issue](https://github.com/ksh-community/ksh/issues/new) and refer to it using a number sign + number (e.g. #123) when you refer to it on github. Within the issue web page you may ask for further guidance or get some hints from other collaborators.
 
 ## Branch, commit, rebase to master
-Before you actually start changing any code, you should always make sure, that your master is up-to-date - see below [**Sync with upstream**](#user-content-1-sync-with-upstream) for the related CLI commands. The master is our main and default branch (trunk). Here development happens, new features and fixes get mergd to this one first (see also [branch overview](./branches.png "ksh Branch Model - see also https://nvie.com/posts/a-successful-git-branching-model/ by Vincent Driessen").
+Before you actually start changing any code, you should always make sure, that your master is up-to-date - see below [**Sync with upstream**](#user-content-1-sync-with-upstream) for the related CLI commands. The master is our main and default branch (trunk). Here development happens, new features and fixes get merged to this one first (see also [branch overview](./branches.png "ksh Branch Model - see also https://nvie.com/posts/a-successful-git-branching-model/ by Vincent Driessen").
 
 When your master is up-to-date, create a new branch, e.g. named `fix_problem`:
 ```
 git checkout master
 git checkout -b fix_problem
 ```
-Always make sure, that you are on the right and _not_ on the master branch, before you start working, e.g. using `git branch`. Each time you think you made progress which should not be lost, commit it to your local branch. Finally, when you think you are done (what might be some days/weeks later), make sure your local master is still in [sync with the upstream master](#user-content-1-sync-with-upstream) and rebase your branch to the master's HEAD, e.g. using:
+Always make sure, that you are on the right branch and _not_ on the master branch, before you start working, e.g. using `git branch`. Each time you think you made progress which should not be lost, commit it to your local branch. Finally, when you think you are done (what might be some days/weeks later), make sure your local master is still in [sync with the upstream master](#user-content-1-sync-with-upstream) and rebase your branch to the master's HEAD, e.g. using:
 ```
 git checkout fix_problem
 git rebase master
@@ -42,7 +42,7 @@ The `--set-upstream` is optional - it tells git, where a push per default gets s
 git push --force-with-lease origin fix_problem
 ```
 
-Now you can use the [**New pull request**](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request-from-a-fork) button in the WebUI of your **origin** to create new Pull request. This will notify PR reviewers, which will have a look at it, may ask for changes or explainations and finally the PR gets merged to the related upstream branch. After this you may do some local housekeeping and delete the merged branch, e.g. using
+Now you can use the [**New pull request**](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request-from-a-fork) button in the WebUI of your **origin** to create a new Pull request. This will notify PR reviewers, which will have a look at it, may ask for changes or explainations and finally the PR gets merged to the related upstream branch. After this you may do some local housekeeping and delete the merged branch, e.g. using
 ```
 git checkout master
 git branch -d fix_problem
@@ -87,9 +87,9 @@ git push origin master
 If the checkout above does not work because of pending changes, just stash them away using `git stash` and when done with merging, get them back using `git stash pop`.
 
 ###	2. Pull the PR into a new local branch
-First, one should create a local branch, where the PR changes get merged in. Actually one may merge the changes directly into the master, however, usually one wanna **review** and **test** the changes, what sometimes takes a little bit longer or need to be postponed for this or that reason and thus would block any progress on the master or on your own branches. So with a new branch one may cherry pick, reword, edit, squash, join and drop commits, make other fine grained adjustments before the PR gets merged into the related upstream branch and if anything goes really wrong, one always has the option to simply drop the branch/changes made so far and start over again.
+First, one should create a local branch, where the PR changes get merged in. Actually one may merge the changes directly into the master, however, usually one may wanna **review** and **test** the changes, which sometimes takes a little bit longer or need to be postponed for this or that reason and thus would block any progress on the master or on your own branches. So with a new branch one may cherry pick, reword, edit, squash, join and drop commits, make other fine grained adjustments before the PR gets merged into the related upstream branch and if anything goes really wrong, one always has the option to simply drop the branch/changes made so far and start over again.
 
-To find out, what to merge into the new branch, one can go to the [ksh repository](https://github.com/ksh-community/ksh) page, click on the [Pull requests](https://github.com/ksh-community/ksh/pulls) tab, and select the desired PR - you will end up with an URL like `https://github.com/ksh-community/ksh/pull/123` - NOTE: the number at the end of the URL is the github assigned **ID** of the PR. On the PR page click on the [command line instructions](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/checking-out-pull-requests-locally) link right beside the green `Squash and merge` button. The pattern you will see is basically `git pull git://github.com/*collaborator*/ksh.git *branch*`. So for our example:
+To find out, what to merge into the new branch, one can go to the [ksh repository](https://github.com/ksh-community/ksh) page, click on the [Pull requests](https://github.com/ksh-community/ksh/pulls) tab, and select the desired PR - you will end up with a URL like `https://github.com/ksh-community/ksh/pull/123` - NOTE: the number at the end of the URL is the github assigned **ID** of the PR. On the PR page click on the [command line instructions](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/checking-out-pull-requests-locally) link right beside the green `Squash and merge` button. The pattern you will see is basically `git pull git://github.com/*collaborator*/ksh.git *branch*`. So for our example:
 ```
 # Option #1
 git checkout master
@@ -132,7 +132,7 @@ In the new local branch, which contains the PR, one should now modify all commit
     * the commit message body gets separated from the commit message title by a single blank line.
     * if the message title contains no reference to the issue ID, add the following tag to the body of all commits: `  See: #321` - replace 321 with the issue ID. You may add more using a single whitespace as separator.
     * max. line length: 80 chars.
-    * if more than one author should be named, add the following line for each of them to the end of the message body: `Co-authored-by: Given Name <email>` - the email should be the one, which the author used to registred with github. 
+    * if more than one author should be named, add the following line for each of them to the end of the message body: `Co-authored-by: Given Name <email>` - the email should be the one, which the author used to registered with github.
     * important know how refs should be part of the commit message unless they are already inlined in the code. If github issue pages are not available, one should still be able to get the know how to understand the patch pretty easy.
   * Code units, commits, patches: One should be able to read and understand them pretty easy, quickly. So:
     * Keep them as compact as possible.
@@ -181,7 +181,7 @@ pick b471a3de1 cleanup docs
 # Note that empty commits are commented out
 ```
 
-Now you can tell git, what you wanna do by changing `pick` to the desired action. E.g. to change/adjust a commit message, replace `pick` with `r` or `reword`. Or because only the final implementation fo func1 is interesting, one should squash `d2d553bdf`, `9d1c21840`, `c0c1631d4`, `1acc8e504` into a single commit, but this commit should be reworded e.g. to `implements new func1 (fixes #321)`. Similar to documentation: if the new function is properly documented, the changes containing the original idea can probably dropped (remove redundancy, `b7213446f`) and `14efcf0fb`, `1d7a502bd`, `b471a3de1` should be squashed together as well. Note that one may also change the order of the commits (but the more changes get made, the higher the probability that merge conflicts occure and you manually need to fix them).  So e.g. one would change the text shown above to:
+Now you can tell git, what you wanna do by changing `pick` to the desired action. E.g. to change/adjust a commit message, replace `pick` with `r` or `reword`. Or because only the final implementation fo func1 is interesting, one should squash `d2d553bdf`, `9d1c21840`, `c0c1631d4`, `1acc8e504` into a single commit, but this commit should be reworded e.g. to `implements new func1 (fixes #321)`. Similar to documentation: if the new function is properly documented, the changes containing the original idea can probably be dropped (remove redundancy, `b7213446f`) and `14efcf0fb`, `1d7a502bd`, `b471a3de1` should be squashed together as well. Note that one may also change the order of the commits (but the more changes that get made, the higher the probability that merge conflicts occur and you manually need to fix them).  So e.g. one would change the text shown above to:
 ```
 pick 35d8f3182 last commit from the master
 d b7213446f doc idea for a new func which handles ...
@@ -193,7 +193,7 @@ f 9d1c21840 use libmath to ...
 f c0c1631d4 fix linebreaks in func1
 f 1acc8e504 revert libmath change - n/a on all platforms
 ```
-Finally you save the text and exit your `${EDITOR}`. Git starts now rebasing. For `14efcf0fb` it takes over the commit message as is, but for `d2d553bdf` it will invoke your `${EDITOR}` for rewording. Just change the presented commit message as mentioned above, save it and exit your `${EDITOR}`. If any conflicts occure, follow the instructions git shows you, or ask for hints on the PR related github page. Finally `git log --oneline HEAD...master` shows something like this:
+Finally you save the text and exit your `${EDITOR}`. Git now starts rebasing. For `14efcf0fb` it takes over the commit message as is, but for `d2d553bdf` it will invoke your `${EDITOR}` for rewording. Just change the presented commit message as mentioned above, save it and exit your `${EDITOR}`. If any conflicts occure, follow the instructions git shows you, or ask for hints on the PR related github page. Finally `git log --oneline HEAD...master` shows something like this:
 ```
 b0e862ef3 document new func1
 ffd638d25 implements new func1 (fixes #321)
